@@ -1,6 +1,3 @@
-#pragma once
-#include <Windows.h>
-
 struct BasePlayer_
 {
 	uintptr_t BasePlayer = 0x3275DE8;
@@ -41,8 +38,10 @@ struct ContainerBelt_
 
 struct List_
 {
+
 	uintptr_t buffer = 0x10;
 	uintptr_t size = 0x18;
+	uintptr_t ArrayValue = 0x20;
 } List; 
 
 struct Item_
@@ -75,9 +74,31 @@ struct ListDictionary_
 {
 	uintptr_t buffer = 0x18;
 	uintptr_t size = 0x10;
+	uintptr_t ArrayValue = 0x20;
 } ListDictionary;
 
-enum PlayerFlags
+struct TOD_Sky_
 {
-	IsAdmin = 4,
-};
+	uintptr_t TOD_Sky = 0x3277AA0;
+	uintptr_t InstanceList = 0x0;
+	uintptr_t Cycle = 0x38;
+	uintptr_t Day = 0x50;
+	uintptr_t Night = 0x58;
+} TOD_Sky_c;
+
+struct TOD_Day_
+{
+	uintptr_t AmbientMultiplier = 0x50;
+	uintptr_t ReflectionMultiplier = 0x54;
+} TOD_Day;
+
+struct TOD_Night_
+{
+	uintptr_t AmbientMultiplier = 0x50;
+	uintptr_t ReflectionMultiplier = 0x54;
+} TOD_Night;
+
+struct TOD_Cycle_
+{
+	uintptr_t Hour = 0x10;
+} TOD_Cycle;
