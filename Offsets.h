@@ -1,3 +1,13 @@
+
+struct BaseNetworkable_
+{
+	uintptr_t BaseNetworkable = 0x32752B0;
+	uintptr_t EntityRealm = 0x0;
+	uintptr_t EntityList = 0x10;
+	uintptr_t PrefabId = 0x48;
+
+} BaseNetworkable_c;
+
 struct BasePlayer_
 {
 	uintptr_t BasePlayer = 0x3275DE8;
@@ -9,6 +19,11 @@ struct BasePlayer_
 	uintptr_t ClActiveItem = 0x5D0;
 	uintptr_t VisPlayerList = 0x10; 
 } BasePlayer_c;
+
+enum PlayerFlags
+{
+	IsAdmin = 4,
+};
 
 struct PlayerWalkMovement_
 {
@@ -24,6 +39,8 @@ struct PlayerWalkMovement_
 struct PlayerModel_
 {
 	uintptr_t speed = 0x2C;
+	uintptr_t position = 0x1F8;
+
 };
 
 struct PlayerInventory_
@@ -35,14 +52,6 @@ struct ContainerBelt_
 {
 	uintptr_t ItemList = 0x38;
 } ContainerBelt; 
-
-struct List_
-{
-
-	uintptr_t buffer = 0x10;
-	uintptr_t size = 0x18;
-	uintptr_t ArrayValue = 0x20;
-} List; 
 
 struct Item_
 {
@@ -70,13 +79,6 @@ struct Projectile_
 	uintptr_t Thickness = 0x2C;
 } Projectile;
 
-struct ListDictionary_
-{
-	uintptr_t buffer = 0x18;
-	uintptr_t size = 0x10;
-	uintptr_t ArrayValue = 0x20;
-} ListDictionary;
-
 struct TOD_Sky_
 {
 	uintptr_t TOD_Sky = 0x3277AA0;
@@ -84,6 +86,7 @@ struct TOD_Sky_
 	uintptr_t Cycle = 0x38;
 	uintptr_t Day = 0x50;
 	uintptr_t Night = 0x58;
+	uintptr_t Sun = 0x60;
 } TOD_Sky_c;
 
 struct TOD_Day_
@@ -102,3 +105,23 @@ struct TOD_Cycle_
 {
 	uintptr_t Hour = 0x10;
 } TOD_Cycle;
+
+struct TOD_SunParameters_
+{
+	uintptr_t MeshBrightness = 0x14;
+} TOD_SunParameters;
+
+struct ListDictionary_
+{
+	uintptr_t buffer = 0x18;
+	uintptr_t size = 0x10;
+	uintptr_t ArrayValue = 0x20;
+} ListDictionary;
+
+struct List_
+{
+
+	uintptr_t buffer = 0x10;
+	uintptr_t size = 0x18;
+	uintptr_t ArrayValue = 0x20;
+} List;
