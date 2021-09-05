@@ -1,32 +1,21 @@
-
-struct GameObject_
-{
-	uintptr_t GameObject = 0x32B1FC8; //"Name" : "UnityEngine.GameObject_TypeInfo",
-	uintptr_t gm1 = 0x8;
-	uintptr_t gm2 = 0x10;
-	uintptr_t gm3 = 0x30;
-	uintptr_t gm4 = 0x18;
-	uintptr_t Player_Camera_Matrix = 0x2E4;
-} GameObject_c;
-
 struct GameObjectManager_
 {
 	uintptr_t GameObjectManager = 0x17D1F18;
 	uintptr_t GameObject = 0x10;
-} GameObjectManager_c;
+} GameObjectManager_c; 
 
 struct BaseNetworkable_
 {
-	uintptr_t BaseNetworkable = 0x32752B0;
+	uintptr_t BaseNetworkable = 0x329B028;
 	uintptr_t EntityRealm = 0x0;
 	uintptr_t EntityList = 0x10;
 	uintptr_t PrefabId = 0x48;
 
-} BaseNetworkable_c;
+} BaseNetworkable_c; 
 
 struct BasePlayer_
 {
-	uintptr_t BasePlayer = 0x3275DE8;
+	uintptr_t BasePlayer = 0x329BB68;
 	uintptr_t PlayerFlags = 0x658; 
 	uintptr_t Movement = 0x4E8;
 	uintptr_t PlayerModel = 0x4C0;
@@ -36,21 +25,22 @@ struct BasePlayer_
 	uintptr_t VisPlayerList = 0x10; 
 	uintptr_t PlayerName = 0x6B8;
 	uintptr_t PlayerEyes = 0x660;
-} BasePlayer_c;
+} BasePlayer_c; 
 
 struct PlayerEyes_
 {
 	uintptr_t ViewOffset = 0x38;
 	uintptr_t EyeOffset = 0x0;
-} PlayerEyes;
+} PlayerEyes;  
 
 enum PlayerFlags
 {
 	IsAdmin = 4,
-};
+}; //
 
 struct PlayerWalkMovement_
 {
+	uintptr_t TargetMovement = 0x34;
 	uintptr_t CapsuleCenter = 0x6C;
 	uintptr_t MaxAngleClimbing = 0x90;
 	uintptr_t MaxAngleWalking = 0x8C;
@@ -58,7 +48,7 @@ struct PlayerWalkMovement_
 	uintptr_t GroundAngleNew = 0xC8; 
 	uintptr_t GroundTime = 0xCC; 
 	uintptr_t Grounded = 0x140;
-} PlayerWalkMovement;
+} PlayerWalkMovement; 
 
 struct PlayerModel_
 {
@@ -108,7 +98,7 @@ struct Projectile_
 
 struct TOD_Sky_
 {
-	uintptr_t TOD_Sky = 0x3277AA0;
+	uintptr_t TOD_Sky = 0x329D8A8;
 	uintptr_t InstanceList = 0x0;
 	uintptr_t Cycle = 0x38;
 	uintptr_t Day = 0x50;
