@@ -1,3 +1,13 @@
+struct GameObject_
+{
+	uintptr_t GameObject = 0x32B1FC8; //"Name" : "UnityEngine.GameObject_TypeInfo",
+	uintptr_t gm1 = 0x8;
+	uintptr_t gm2 = 0x10;
+	uintptr_t gm3 = 0x30;
+	uintptr_t gm4 = 0x18;
+	uintptr_t Player_Camera_Matrix = 0x2E4;
+} GameObject_c; 
+
 struct GameObjectManager_
 {
 	uintptr_t GameObjectManager = 0x17D1F18;
@@ -10,7 +20,7 @@ struct BaseNetworkable_
 	uintptr_t EntityRealm = 0x0;
 	uintptr_t EntityList = 0x10;
 	uintptr_t PrefabId = 0x48;
-
+	uintptr_t Net = 0x50;
 } BaseNetworkable_c; 
 
 struct BasePlayer_
