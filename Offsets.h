@@ -1,47 +1,31 @@
-struct GameObject_
-{
-	uintptr_t GameObject = 0x32B1FC8; //"Name" : "UnityEngine.GameObject_TypeInfo",
-	uintptr_t gm1 = 0x8;
-	uintptr_t gm2 = 0x10;
-	uintptr_t gm3 = 0x30;
-	uintptr_t gm4 = 0x18;
-	uintptr_t Player_Camera_Matrix = 0x2E4;
-} GameObject_c; 
-
 struct GameObjectManager_
 {
 	uintptr_t GameObjectManager = 0x17C1F18;
 	uintptr_t GameObject = 0x10;
-} GameObjectManager_c; 
+} GameObjectManager_c;
 
 struct BaseNetworkable_
 {
-	uintptr_t BaseNetworkable = 0x329B028;
+	uintptr_t BaseNetworkable = 0x32A4668;
 	uintptr_t EntityRealm = 0x0;
 	uintptr_t EntityList = 0x10;
 	uintptr_t PrefabId = 0x48;
 	uintptr_t Net = 0x50;
-} BaseNetworkable_c; 
+	uintptr_t PrefabName = 0x60;
+} BaseNetworkable_c;
 
 struct BasePlayer_
 {
-	uintptr_t BasePlayer = 0x329BB68;
-	uintptr_t PlayerFlags = 0x658; 
-	uintptr_t Movement = 0x4E8;
+	uintptr_t BasePlayer = 0x32A51B0;
 	uintptr_t PlayerModel = 0x4C0;
+	uintptr_t PlayerFlags = 0x658;
+	uintptr_t Movement = 0x4E8;
 	uintptr_t UID = 0x6A0;
 	uintptr_t PlayerInventory = 0x668;
 	uintptr_t ClActiveItem = 0x5D0;
-	uintptr_t VisPlayerList = 0x10; 
+	uintptr_t VisPlayerList = 0x10;
 	uintptr_t PlayerName = 0x6B8;
-	uintptr_t PlayerEyes = 0x660;
-} BasePlayer_c; 
-
-struct PlayerEyes_
-{
-	uintptr_t ViewOffset = 0x38;
-	uintptr_t EyeOffset = 0x0;
-} PlayerEyes;  
+} BasePlayer_c;
 
 enum PlayerFlags
 {
@@ -54,11 +38,11 @@ struct PlayerWalkMovement_
 	uintptr_t CapsuleCenter = 0x6C;
 	uintptr_t MaxAngleClimbing = 0x90;
 	uintptr_t MaxAngleWalking = 0x8C;
-	uintptr_t GroundAngle = 0xC4; 
-	uintptr_t GroundAngleNew = 0xC8; 
-	uintptr_t GroundTime = 0xCC; 
+	uintptr_t GroundAngle = 0xC4;
+	uintptr_t GroundAngleNew = 0xC8;
+	uintptr_t GroundTime = 0xCC;
 	uintptr_t Grounded = 0x140;
-} PlayerWalkMovement; 
+} PlayerWalkMovement;
 
 struct PlayerModel_
 {
@@ -69,12 +53,12 @@ struct PlayerModel_
 struct PlayerInventory_
 {
 	uintptr_t ContainerBelt = 0x28;
-} PlayerInventory; 
+} PlayerInventory;
 
 struct ContainerBelt_
 {
 	uintptr_t ItemList = 0x38;
-} ContainerBelt; 
+} ContainerBelt;
 
 struct Item_
 {
@@ -83,8 +67,8 @@ struct Item_
 	uintptr_t Name = 0x58;
 	uintptr_t Skin = 0x50;
 	uintptr_t EntityRef = 0x98;
-	uintptr_t UID = 0x28; 
-} Item; 
+	uintptr_t UID = 0x28;
+} Item;
 
 struct ItemDefinition_
 {
@@ -94,17 +78,30 @@ struct ItemDefinition_
 
 struct BaseProjectile_
 {
+	uintptr_t AimCone = 0x2E8;
+	uintptr_t AimSway = 0x2D0;
+	uintptr_t AimSwaySpeed = 0x2D4;
+	uintptr_t AimConeHip = 0x2EC;
+	uintptr_t successFraction = 0x360;
 	uintptr_t CreatedProjectilesList = 0x358;
+	uintptr_t stringHoldDurationMax = 0x378;
 } BaseProjectile;
 
 struct Projectile_
 {
+	uintptr_t ProjectileMod = 0xE8;
 	uintptr_t Thickness = 0x2C;
 } Projectile;
 
+struct ItemModProjectile_
+{
+	uintptr_t Spread = 0x30;
+	uintptr_t ProjectileVelocitySpread = 0x38;
+} ItemModProjectile;
+
 struct TOD_Sky_
 {
-	uintptr_t TOD_Sky = 0x329D8A8;
+	uintptr_t TOD_Sky = 0x32A6EE0; 
 	uintptr_t InstanceList = 0x0;
 	uintptr_t Cycle = 0x38;
 	uintptr_t Day = 0x50;
@@ -133,18 +130,3 @@ struct TOD_SunParameters_
 {
 	uintptr_t MeshBrightness = 0x14;
 } TOD_SunParameters;
-
-struct ListDictionary_
-{
-	uintptr_t buffer = 0x18;
-	uintptr_t size = 0x10;
-	uintptr_t ArrayValue = 0x20;
-} ListDictionary;
-
-struct List_
-{
-
-	uintptr_t buffer = 0x10;
-	uintptr_t size = 0x18;
-	uintptr_t ArrayValue = 0x20;
-} List;
